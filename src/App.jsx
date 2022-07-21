@@ -29,7 +29,6 @@ function App() {
       </div>
       <div className='tecno-manage'>
         <p>{t("tecnologias")}</p>
-        <img className="picture-red" src="./img/redes.png" alt="redes"></img>
       </div>
     </div>
   )
