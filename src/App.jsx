@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+import Nav from './components/Navbar'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+      < Nav/>
       <div className='picture'>
         <img className="picture-me" src="./img/me.jpeg" alt="perfil"></img>
       </div>
