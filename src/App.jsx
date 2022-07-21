@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       < Nav/>
       <div className='picture'>
-        <img className="picture-me" src="./img/me.jpeg" alt="perfil"></img>
+        <img className="picture-me" src="./Onyx.webp" alt="perfil"></img>
       </div>
       <div className='name'>
         <h1>{t("nombre")}</h1>
