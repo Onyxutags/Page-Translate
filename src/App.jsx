@@ -1,34 +1,37 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import { useTranslation } from 'react-i18next';
+
 
 function App() {
   const [count, setCount] = useState(0)
+  const { t } = useTranslation();
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='picture'>
+        <img className="picture-me" src="./img/me.jpeg" alt="perfil"></img>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='name'>
+        <h1>{t("nombre")}</h1>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className='info'>
+        <p>{t("descripcion1")}</p>
+        <p>{t("descripcion2")}</p>
+      </div>
+      <div className='button'>
+        <div className="btn-group">
+          <button onClick={() => setCount((count) => count + 1)}>{t("boton1")} </button>
+        </div>
+        <div>
+          <p>{t("boton2")} {count}</p>
+        </div>
+      </div>
+      <div className='tecno-manage'>
+        <p>{t("tecnologias")}</p>
+        <img className="picture-red" src="./img/redes.png" alt="redes"></img>
+      </div>
     </div>
   )
 }
-
 export default App
