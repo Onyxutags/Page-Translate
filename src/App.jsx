@@ -10,29 +10,58 @@ function App() {
 
   return (
     <div className="App">
-      < Nav/>
-      <div className='picture'>
-        <img className="picture-me" src="./Onyx.webp" alt="perfil"></img>
-      </div>
-      <div className='name'>
-        <h1>{t("nombre")}</h1>
-      </div>
-      <div className='info'>
-        <p>{t("descripcion1")}</p>
-        <p>{t("descripcion2")}</p>
-      </div>
-      <div className='button'>
-        <div className="btn-group">
-          <button onClick={() => setCount((count) => count + 1)}>{t("boton1")} </button>
+
+      <Nav/>
+
+        <div className='container'>
+
+          <div>
+        
+            <div className='name'>
+
+              <h1>{t("nombre")}</h1>
+
+            </div>
+          
+            <div className='information'>
+
+              <p>{t("descripcion1")}</p>
+              <p>{t("descripcion2")}</p>
+
+            </div>
+          
+            <button className='button' onClick={() => setCount((count) => count + 1)}>
+            
+              {t("boton1")}
+
+            </button>
+
+            <div className='count'>
+
+              <p>{t("boton2")} {count}</p>
+
+            </div>
+
+          </div>
+        
+          <div className='photo'>
+
+            <img className="picture-me" src="./Onyx.webp" alt="perfil"></img>
+
+          </div>
+
         </div>
-        <div>
-          <p>{t("boton2")} {count}</p>
+
+        <div className='tecnologies'>
+
+          <p>{t("tecnologias")}</p>
+
+          <img className='tech' src="./tech.png" alt="perfil" />
+      
         </div>
-      </div>
-      <div className='tecno-manage'>
-        <p>{t("tecnologias")}</p>
-      </div>
-    </div>
+      
+  </div>
+ 
   )
 }
 export default App

@@ -10,10 +10,10 @@ const Nav = () => {
 
     return (
         <nav>
-            <div className='options'>
-                <a href="/home" className='hover-underline-animation'> Home </a>
-                <a className='hover-underline-animation' onClick={() => changeLanguage("en")}> English </a>
-                <a className='hover-underline-animation' onClick={() => changeLanguage("es")}> Spanish </a>
+            <div className='selection'>
+                <a href="/home" className='animation'> Home </a>
+                <a className='animation' onClick={() => changeLanguage("en")}> English </a>
+                <a className='animation' onClick={() => changeLanguage("es")}> Spanish </a>
             </div>
         </nav>
     );
